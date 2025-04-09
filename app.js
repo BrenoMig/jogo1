@@ -42,7 +42,8 @@ function verificarChute() {
         let palavraTentativa = tentativas > 1 ? "tentativas" : "tentativa";
         let mensagemTentativa = `Você descobriu o número com ${tentativas} ${palavraTentativa} :D`;
         exibirTexto("p", `${mensagemTentativa}`);
-
+        
+        document.getElementById("chutar").setAttribute("disabled", true);
         document.getElementById("reiniciar").removeAttribute("disabled");
     } else {       
         if(chute < numeroSecreto){
@@ -68,6 +69,7 @@ function novoJogo(){
     mensagemInicial();
     tentativas = 1;
 
+    document.getElementById("chutar").removeAttribute("disabled");
     document.getElementById("reiniciar").setAttribute("disabled", true);
 }
 
