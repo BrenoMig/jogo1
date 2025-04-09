@@ -29,7 +29,6 @@ function gerarNumeroAleatorio(numeroMax) {
         return gerarNumeroAleatorio(numeroMax);
     } else {
         numerosSorteados.push(numeroEscolhido);
-        console.log(numerosSorteados);
         return numeroEscolhido;
     }
 }
